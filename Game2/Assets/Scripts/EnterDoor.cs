@@ -39,7 +39,7 @@ public class EnterDoor : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetComponent<RightDoor>() || collision.GetComponent<LeftDoor>() || collision.GetComponent<BottomStairs>())
+        if (collision.GetComponent<RightDoor>() || collision.GetComponent<LeftDoor>() || collision.GetComponent<BottomStairs>() || collision.GetComponent<ClosedDoorTop>())
         {
             enterAllowed = false;
         }

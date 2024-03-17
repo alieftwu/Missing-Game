@@ -62,4 +62,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Floor3/Floor3 left secret.unity
     guid: 36ceabc739f9f2247bac095109b754e4
+  - enabled: 1
+    path: Assets/Scenes/Investigation Room - Copy.unity
+    guid: c9a6aea81ac2d40bf870416a2d01bca9
   m_configObjects: {}
