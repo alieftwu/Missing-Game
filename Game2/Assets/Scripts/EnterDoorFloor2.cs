@@ -46,11 +46,16 @@ public class EnterDoorFloor2 : MonoBehaviour
             sceneToLoad = "Floor 1";
             enterAllowed = true;
         }
+        else if (collision.GetComponent<StairsToFloor3>())
+        {
+            sceneToLoad = "Floor3";
+            enterAllowed = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.GetComponent<BottomLeftDoor>() || collision.GetComponent<TopLeftDoor>() || collision.GetComponent<TopRightDoor>()
-        || collision.GetComponent<SideDoorBottomRight>() || collision.GetComponent<ExitDoorBottomStairs>())
+        || collision.GetComponent<SideDoorBottomRight>() || collision.GetComponent<ExitDoorBottomStairs>() || collision.GetComponent<StairsToFloor3>())
         {
             enterAllowed = false;
         }

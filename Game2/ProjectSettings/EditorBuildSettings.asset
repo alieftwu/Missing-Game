@@ -38,4 +38,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Floor 2/Floor2 hidden.unity
     guid: a2e179c5404b4344db8841c166ecf0c8
+  - enabled: 1
+    path: Assets/Scenes/Floor3/Floor3.unity
+    guid: eca628af298fc724483476c918d89aba
+  - enabled: 1
+    path: Assets/Scenes/Floor3/Floor3 bottom right secret.unity
+    guid: 9464bc3a77fbacd409ea976180f8190f
+  - enabled: 1
+    path: Assets/Scenes/Floor3/Floor3 center.unity
+    guid: 1e0c594981133f940ae9ccba528b01ee
+  - enabled: 1
+    path: Assets/Scenes/Floor3/Floor3 top right.unity
+    guid: 03a05d9c19b413c49af32edddf2198e8
+  - enabled: 1
+    path: Assets/Scenes/Floor3/Floor3 middle right.unity
+    guid: a64254d38b900ec499a329cecbd1b162
+  - enabled: 1
+    path: Assets/Scenes/Floor3/Floor3 left.unity
+    guid: 8de68ff4e251ae14fa58a0717fb1a796
+  - enabled: 1
+    path: Assets/Scenes/Floor3/Floor3 middle bottom right connection.unity
+    guid: 70946fd96ef37634e85dcc4ae120c1d2
+  - enabled: 1
+    path: Assets/Scenes/Floor3/Floor3 left secret.unity
+    guid: 36ceabc739f9f2247bac095109b754e4
   m_configObjects: {}
