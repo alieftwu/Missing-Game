@@ -35,21 +35,21 @@ public class Inventory_UI : MonoBehaviour
     public void Setup()
     {
         if(slots.Count == player.inventory.slots.Count)
-    {
-        for(int i = 0; i < slots.Count; i++)
         {
-            if(player.inventory.slots[i].type != CollectableType.NONE)
+            for(int i = 0; i < slots.Count; i++)
             {
-                string description = GetDescriptionForType(player.inventory.slots[i].type);
-                slots[i].SetItem(player.inventory.slots[i], description);
-            }
-            else
-            {
-                slots[i].SetEmpty();
-                slots[i].ClearDescription();
+                if(player.inventory.slots[i].type != CollectableType.NONE)
+                {
+                    string description = GetDescriptionForType(player.inventory.slots[i].type);
+                    slots[i].SetItem(player.inventory.slots[i], description);
+                }
+                else
+                {
+                    slots[i].SetEmpty();
+                    slots[i].ClearDescription();
+                }
             }
         }
-    }
 
     }
 
@@ -81,6 +81,7 @@ public class Inventory_UI : MonoBehaviour
                 return "Saw";
             case CollectableType.WORKER_VEST:
                 return "Worker Vest";
+
             // Add more cases for other types as needed
             default:
                 return "";
