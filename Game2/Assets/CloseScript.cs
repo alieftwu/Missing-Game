@@ -13,7 +13,7 @@ public class Description : MonoBehaviour
         Debug.Log("ButtonPressed value: " + buttonPressed);
 
         // Check if the popup has been displayed before
-        if (PlayerPrefs.GetInt("ButtonPressed") == 1)
+        if (buttonPressed == 1)
         {
             // Display the popup
             description.SetActive(true);
@@ -26,6 +26,8 @@ public class Description : MonoBehaviour
         description.SetActive(false);
         Time.timeScale = 1;
         PlayerPrefs.DeleteKey("ButtonPressed");
+        int buttonPressed = PlayerPrefs.GetInt("ButtonPressed");
+        Debug.Log("ButtonPressed value: " + buttonPressed);
         PlayerPrefs.Save();
     }
 }
