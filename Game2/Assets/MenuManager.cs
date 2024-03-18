@@ -8,7 +8,7 @@ public class MainMenu: MonoBehaviour {
 
     public void PlayGame() {
         SceneManager.LoadScene("Floor 1");
-        Time.timeScale = 0;
+
 
     }
     public void QuitGame() {
