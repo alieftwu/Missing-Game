@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
-using UnityEngine.UI;
 
 public class Description : MonoBehaviour
 {
     [SerializeField] GameObject description;
 
-    void Start()
+    public void Start()
     {
+        int buttonPressed = PlayerPrefs.GetInt("ButtonPressed");
+        Debug.Log("ButtonPressed value: " + buttonPressed);
+
         // Check if the popup has been displayed before
-        if (!PlayerPrefs.HasKey("PopupDisplayed"))
+        if (PlayerPrefs.GetInt("ButtonPressed") == 1)
         {
             // Display the popup
             description.SetActive(true);
@@ -24,9 +25,7 @@ public class Description : MonoBehaviour
     {
         description.SetActive(false);
         Time.timeScale = 1;
-
-        // Set the flag to indicate that the popup has been displayed
-        PlayerPrefs.SetInt("PopupDisplayed", 1);
+        PlayerPrefs.DeleteKey("ButtonPressed");
         PlayerPrefs.Save();
     }
 }

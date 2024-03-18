@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class EnterDoorFloor3 : MonoBehaviour
 {
+    public GameObject thoughtBubblePrefab; // Reference to the thought bubble prefab
+    private GameObject thoughtBubble; // Reference to the instantiated thought bubble
     public AudioClip openDoorSound;
     private bool enterAllowed;
     private string sceneToLoad;
@@ -46,6 +49,8 @@ public class EnterDoorFloor3 : MonoBehaviour
         }
         else if(collision.GetComponent<ClosedDoorTopRight>())
         {
+            thoughtBubble = Instantiate(thoughtBubblePrefab, transform.position + Vector3.up * 1.5f, Quaternion.identity);
+            thoughtBubble.transform.SetParent(collision.transform);
             audioSource.PlayOneShot(openDoorSound);
         }
         else if(collision.GetComponent<ClosedDoorMiddleRight>())
@@ -87,6 +92,8 @@ public class EnterDoorFloor3 : MonoBehaviour
         if(collision.GetComponent<ClosedDoorBottomRight>() || collision.GetComponent<ClosedDoorCenter>() || collision.GetComponent<ClosedDoorTopRight>() ||
         collision.GetComponent<ClosedDoorMiddleRight>() || collision.GetComponent<ClosedDoorLeft>() || collision.GetComponent<BackToFloor2>())
         {
+            // Remove the thought bubble when the player moves away from the door
+            Destroy(thoughtBubble);
             enterAllowed = false;
         }
     }

@@ -26559,6 +26559,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6164336658923894702, guid: 791e20abc464fc04c961c8ddd6053c77, type: 3}
+      propertyPath: thoughtBubblePrefab
+      value: 
+      objectReference: {fileID: 4658652783089206490, guid: b4054e068200ac74d8bdb790c9df13a9, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -1566,11 +1566,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186768262}
   m_CullTransparentMesh: 1
---- !u!82 &1197750032 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1358105594279461420, guid: 2fe6672aa184d7241a124262d2f1d0ff, type: 3}
-  m_PrefabInstance: {fileID: 641790768}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1247225283
 GameObject:
   m_ObjectHideFlags: 0
@@ -2556,7 +2551,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberText: {fileID: 433336605}
-  rainSound: {fileID: 1197750032}
 --- !u!114 &2017196841
 MonoBehaviour:
   m_ObjectHideFlags: 0

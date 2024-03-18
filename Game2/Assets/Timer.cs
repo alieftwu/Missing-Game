@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
 {
     public static Timer Instance { get; private set; }
     [SerializeField] TextMeshProUGUI timerText;
-    public static float remainingTime = 120f; // Static variable to hold the remaining time, initially set to 2 minutes
+    public static float remainingTime = 600f; // Static variable to hold the remaining time, initially set to 2 minutes
     public GameObject popupPanel; // Reference to the popup panel object
 
     private bool popupDisplayed = false;
@@ -93,11 +93,11 @@ public class Timer : MonoBehaviour
 
     public void GoToInvestigation()
     {
-        SceneManager.LoadScene("Investigation Room - Copy");
+        SceneManager.LoadScene("Investigation Room");
     }
 
     private void ResetTimer()
     {
-        remainingTime = 120f; // Reset the remaining time to 2 minutes
+        remainingTime = 600f; // Reset the remaining time to 2 minutes
     }
 }
