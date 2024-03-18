@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu: MonoBehaviour {
 
-    public int gamePlayScene;
+
 
     public void PlayGame() {
-        SceneManager.LoadScene(gamePlayScene);
+        SceneManager.LoadScene("Floor 1");
     }
     public void QuitGame() {
         Application.Quit();
