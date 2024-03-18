@@ -32,9 +32,6 @@ public class keyScript : MonoBehaviour
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
-
-
-
     }
 
     public void stopKey()

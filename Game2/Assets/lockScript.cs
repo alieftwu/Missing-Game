@@ -7,6 +7,7 @@ public class lockScript : MonoBehaviour
 {
     public keyScript key;
     private string sceneToLoad;
+    public int OMLNumber;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,7 @@ public class lockScript : MonoBehaviour
     {
         print("Game Failed");
         key.stopKey();
-        sceneToLoad = "Floor 1";
+        sceneToLoad = PlayerPrefs.GetString("ReturnScene");
         SceneManager.LoadScene(sceneToLoad);
     }
 
