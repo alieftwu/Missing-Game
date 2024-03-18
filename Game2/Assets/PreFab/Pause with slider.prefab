@@ -146,9 +146,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7557529413375811492, guid: 26135566ad4854009bae6c59e4101e06, type: 3}
       propertyPath: m_Name
-      value: Pause Variant
+      value: Pause with slider
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8733443226047231946, guid: 26135566ad4854009bae6c59e4101e06, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3213891440981549523, guid: 26135566ad4854009bae6c59e4101e06, type: 3}
@@ -171,15 +172,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2208066256106146848, guid: c5d2d1bc5bb9b4895b2fcf968eeeccf8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 2208066256106146848, guid: c5d2d1bc5bb9b4895b2fcf968eeeccf8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2208066256106146848, guid: c5d2d1bc5bb9b4895b2fcf968eeeccf8, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 3305080606698007894, guid: c5d2d1bc5bb9b4895b2fcf968eeeccf8, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -271,11 +272,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4553931498677816303, guid: c5d2d1bc5bb9b4895b2fcf968eeeccf8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 4553931498677816303, guid: c5d2d1bc5bb9b4895b2fcf968eeeccf8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8432244515958755888, guid: c5d2d1bc5bb9b4895b2fcf968eeeccf8, type: 3}
       propertyPath: m_Name
