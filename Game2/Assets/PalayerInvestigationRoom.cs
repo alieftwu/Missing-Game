@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PalayerInvestigationRoom : MonoBehaviour
 {
     public GameObject thoughtBubblePrefab; // Reference to the thought bubble prefab
+
     private GameObject thoughtBubble; // Reference to the instantiated thought bubble
 
     private void Start()
@@ -15,19 +17,24 @@ public class PalayerInvestigationRoom : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        GameObject childObject = thoughtBubblePrefab.transform.GetChild(0).gameObject;
+        TMP_Text childText = childObject.GetComponent<TMP_Text>();
+
         if (collision.GetComponent<GardenerSuspect>())
         {
-            print("Gardener Suspect");
+            thoughtBubblePrefab.SetActive(true);
+            childText.text = "Timothy took over Mr. Stone’s estate’s gardening duties last fall after his previous gardner retired.  Timothy is reported to have had many arguments with Mr. Stone regarding plant care and disliked Mr. Stone.";
             PlayerPrefs.SetString("suspect", "gardener");
         }
         else if (collision.GetComponent<ConstructionSuspect>())
         {
-            print("Construction Suspect");
+            thoughtBubblePrefab.SetActive(true);
             PlayerPrefs.SetString("suspect", "construction");
         }
         else if (collision.GetComponent<ButlerSuspect>())
         {
-            print("BUtler Suspect");
+            thoughtBubblePrefab.SetActive(true);
+            childText.text = "Johnathan has served as the victim’s butler for over 20 years and enjoyed a pleasant relationship.  After completing his nightly duties, he was the last person to see Mr. Stone.";
             PlayerPrefs.SetString("suspect", "butler");
         }
     }
@@ -38,6 +45,7 @@ public class PalayerInvestigationRoom : MonoBehaviour
             collision.GetComponent<ButlerSuspect>())
         {
             print("close text box");
+            thoughtBubblePrefab.SetActive(false);
             PlayerPrefs.SetString("suspect", "");
         }
     }
