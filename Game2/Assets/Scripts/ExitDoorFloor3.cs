@@ -41,7 +41,16 @@ public class ExitDoorFloor3 : MonoBehaviour
             audioSource.PlayOneShot(openDoorSound);
             PlayerPrefs.SetFloat("PlayerXMiddleConnect", transform.position.x);
             PlayerPrefs.SetFloat("PlayerYMiddleConnect", transform.position.y);
-            sceneToLoad = "Floor3 middle bottom right connection";
+            PlayerPrefs.SetString("ReturnScene", "Floor3 bottom right secret");
+            if (PlayerPrefs.GetInt("Floor3 middle bottom right connection") == 0)
+            {
+                sceneToLoad = "Key Game";
+                PlayerPrefs.SetString("LoadScene", "Floor3 middle bottom right connection");
+            }
+            else
+            {
+                sceneToLoad = "Floor3 middle bottom right connection";
+            }
             exitAllowed = true;
         }
         else if(collision.GetComponent<ExitDoorMiddle>())
@@ -56,7 +65,16 @@ public class ExitDoorFloor3 : MonoBehaviour
             audioSource.PlayOneShot(openDoorSound);
             PlayerPrefs.SetFloat("PlayerXMiddle", transform.position.x);
             PlayerPrefs.SetFloat("PlayerYMiddle", transform.position.y);
-            sceneToLoad = "Floor3 middle right";
+            PlayerPrefs.SetString("ReturnScene", "Floor3 middle bottom right connection");
+            if (PlayerPrefs.GetInt("Floor3 middle right") == 0)
+            {
+                sceneToLoad = "Key Game";
+                PlayerPrefs.SetString("LoadScene", "Floor3 middle right");
+            }
+            else
+            {
+                sceneToLoad = "Floor3 middle right";
+            }
             exitAllowed = true;
         }
         else if(collision.GetComponent<ExitDoorLeftToFloor3>())
@@ -71,7 +89,16 @@ public class ExitDoorFloor3 : MonoBehaviour
             audioSource.PlayOneShot(openDoorSound);
             PlayerPrefs.SetFloat("PlayerXLeftRoom", transform.position.x);
             PlayerPrefs.SetFloat("PlayerYLeftRoom", transform.position.y);
-            sceneToLoad = "Floor3 left secret";
+            PlayerPrefs.SetString("ReturnScene", "Floor3 left");
+            if (PlayerPrefs.GetInt("Floor3 left secret") == 0)
+            {
+                sceneToLoad = "Key Game";
+                PlayerPrefs.SetString("LoadScene", "Floor3 left secret");
+            }
+            else
+            {
+                sceneToLoad = "Floor3 left secret";
+            }
             exitAllowed = true;
         }
         else if(collision.GetComponent<ExitDoorLeftHidden>())
