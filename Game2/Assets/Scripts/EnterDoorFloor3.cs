@@ -19,13 +19,29 @@ public class EnterDoorFloor3 : MonoBehaviour
         if (collision.GetComponent<ClosedDoorBottomRight>())
         {
             audioSource.PlayOneShot(openDoorSound);
-            sceneToLoad = "Floor3 bottom right secret";
+            if (PlayerPrefs.GetInt("Floor3 bottom right secret") == 0)
+            {
+                sceneToLoad = "Key Game";
+                PlayerPrefs.SetString("LoadScene", "Floor3 bottom right secret");
+            }
+            else
+            {
+                sceneToLoad = "Floor3 bottom right secret";
+            }
             enterAllowed = true;
         }
         else if(collision.GetComponent<ClosedDoorCenter>())
         {
             audioSource.PlayOneShot(openDoorSound);
-            sceneToLoad = "Floor3 center";
+            if (PlayerPrefs.GetInt("Floor3 center") == 0)
+            {
+                sceneToLoad = "Key Game";
+                PlayerPrefs.SetString("LoadScene", "Floor3 center");
+            }
+            else
+            {
+                sceneToLoad = "Floor3 center";
+            }
             enterAllowed = true; 
         }
         else if(collision.GetComponent<ClosedDoorTopRight>())
@@ -35,13 +51,29 @@ public class EnterDoorFloor3 : MonoBehaviour
         else if(collision.GetComponent<ClosedDoorMiddleRight>())
         {
             audioSource.PlayOneShot(openDoorSound);
-            sceneToLoad = "Floor3 top right";
+            if (PlayerPrefs.GetInt("Floor3 top right") == 0)
+            {
+                sceneToLoad = "Key Game";
+                PlayerPrefs.SetString("LoadScene", "Floor3 top right");
+            }
+            else
+            {
+                sceneToLoad = "Floor3 top right";
+            }
             enterAllowed = true;
         }
         else if(collision.GetComponent<ClosedDoorLeft>())
         {
             audioSource.PlayOneShot(openDoorSound);
-            sceneToLoad = "Floor3 left";
+            if (PlayerPrefs.GetInt("Floor3 left") == 0)
+            {
+                sceneToLoad = "Key Game";
+                PlayerPrefs.SetString("LoadScene", "Floor3 left");
+            }
+            else
+            {
+                sceneToLoad = "Floor3 left";
+            }
             enterAllowed = true;
         }
         else if(collision.GetComponent<BackToFloor2>())
@@ -65,9 +97,10 @@ public class EnterDoorFloor3 : MonoBehaviour
             //Save the player's position before loading the new scene
             PlayerPrefs.SetFloat("PlayerX3", transform.position.x);
             PlayerPrefs.SetFloat("PlayerY3", transform.position.y);
-            
+
             //Load the next scene after small delay to play sound
-           SceneManager.LoadScene(sceneToLoad);
+            PlayerPrefs.SetString("ReturnScene", "Floor3");
+            SceneManager.LoadScene(sceneToLoad);
         }
     }
 }

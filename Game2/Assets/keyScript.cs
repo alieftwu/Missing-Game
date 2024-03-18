@@ -21,7 +21,7 @@ public class keyScript : MonoBehaviour
         {
             float newY = Mathf.Sin(Time.time * speed) * height;
             //set the object's Y to the new calculated Y
-            transform.position = new Vector2(-3, newY);
+            transform.position = new Vector2(transform.position.x, newY);
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -32,9 +32,6 @@ public class keyScript : MonoBehaviour
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
-
-
-
     }
 
     public void stopKey()
