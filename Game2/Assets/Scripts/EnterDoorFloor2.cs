@@ -23,14 +23,14 @@ public class EnterDoorFloor2 : MonoBehaviour
         }
         if (collision.GetComponent<BottomLeftDoor>())
         {
-            if (PlayerPrefs.GetInt("Floor2 bottom left Secret") == 0)
+            if (PlayerPrefs.GetInt("Floor2 bottom left") == 0)
             {
                 sceneToLoad = "Key Game";
-                PlayerPrefs.SetString("LoadScene", "Floor2 bottom left Secret");
+                PlayerPrefs.SetString("LoadScene", "Floor2 bottom left");
             }
             else
             {
-                sceneToLoad = "Floor2 bottom left Secret";
+                sceneToLoad = "Floor2 bottom left";
             }
             enterAllowed = true;
         }
