@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.U2D.IK;
 
 public class EdgeBookScript : MonoBehaviour
 {
@@ -26,5 +27,7 @@ public class EdgeBookScript : MonoBehaviour
     {
         print("Game Failed");
         arrow.stopKey();
+        SceneManager.LoadScene("Floor1 left");
+
     }
 }

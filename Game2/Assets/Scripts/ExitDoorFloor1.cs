@@ -31,7 +31,7 @@ public class ExitDoorFloor1 : MonoBehaviour
             PlayerPrefs.SetFloat("PlayerXLibrary", transform.position.x);
             PlayerPrefs.SetFloat("PlayerYLibrary", transform.position.y);
             audioSource.PlayOneShot(openDoorSound);
-            sceneToLoad = "Floor 1 lib secret";
+            sceneToLoad = "Book Game";
             exitAllowed = true;
         }
         else if (collision.GetComponent<ExitToFloor1LeftRoom>())

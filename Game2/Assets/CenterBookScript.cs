@@ -25,5 +25,6 @@ public class CenterBookScript : MonoBehaviour
     {
         print("Game Win");
         arrow.stopKey();
+        SceneManager.LoadScene("Floor 1 lib secret");
     }
 }

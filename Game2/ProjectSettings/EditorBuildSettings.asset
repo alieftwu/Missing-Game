@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Floor 1 right.unity
     guid: 7b2d2b657c7fae54f9b6a074a16aef63
   - enabled: 1
+    path: Assets/Scenes/Mini Games/Book Game.unity
+    guid: dc5ba751a37a44bc0aa6249fdab3a987
+  - enabled: 1
     path: Assets/Scenes/Floor1 left.unity
     guid: 5f71d3739924b5644a0e1983ea5e1b18
   - enabled: 1
