@@ -20,7 +20,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void Home(){
-        SceneManager.LoadScene("Menu copy");
+        SceneManager.LoadScene("Main Menu");
         Time.timeScale = 1;
     }
 
@@ -28,4 +28,6 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
     }
+
+
 }

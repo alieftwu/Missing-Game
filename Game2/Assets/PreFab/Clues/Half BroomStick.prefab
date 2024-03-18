@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd18aa41811c4c449f34db57c2808a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondSprite: {fileID: 21300000, guid: be923e26b87490c488e2b232aa334cbf, type: 3}
+  secondSprite: {fileID: -1050253415, guid: aa28264c29aa8dd4c87c8ed920413b07, type: 3}
   interactKey: 101
   type: 4
   icon: {fileID: 21300000, guid: aa28264c29aa8dd4c87c8ed920413b07, type: 3}

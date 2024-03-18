@@ -23,9 +23,10 @@ public class lockBackgroundScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        sceneToLoad = PlayerPrefs.GetString("LoadScene");
         print("Game Win");
         key.stopKey();
-        sceneToLoad = "Floor 1 right";
+        PlayerPrefs.SetInt(sceneToLoad, 1);
         SceneManager.LoadScene(sceneToLoad);
     }
 
