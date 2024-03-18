@@ -16,6 +16,12 @@ public class UpdateSprite : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalSprite = spriteRenderer.sprite;
+        
+        // Check if the clue has been collected previously and destroy it if necessary
+        if (PlayerPrefs.HasKey(gameObject.name) && PlayerPrefs.GetInt(gameObject.name) == 1)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
@@ -57,16 +63,19 @@ public class UpdateSprite : MonoBehaviour
                 Player player = collider.GetComponent<Player>();
                 if (player != null)
                 {
+                    // Mark the clue as collected in PlayerPrefs
+                    PlayerPrefs.SetInt(gameObject.name, 1);
+                    PlayerPrefs.Save();
                     player.inventory.Add(this);
                 }
             }
             else if (collider.CompareTag("Clue"))
             {
+                // Destroy the clue object
                 Destroy(collider.gameObject);
             }
         }
     }
-
 }
 
 public enum CollectableType
