@@ -34,6 +34,8 @@ public class Inventory_UI : MonoBehaviour
 
     public void Setup()
     {
+        if (player != null)
+        {
         if(slots.Count == player.inventory.slots.Count)
         {
             for(int i = 0; i < slots.Count; i++)
@@ -50,7 +52,7 @@ public class Inventory_UI : MonoBehaviour
                 }
             }
         }
-
+        }
     }
 
     private string GetDescriptionForType(CollectableType type)
