@@ -50,11 +50,17 @@ public class ExitDoorFloor2 : MonoBehaviour
             sceneToLoad = "Floor 2 top right";
             exitAllowed = true;
         }
+        else if (collision.GetComponent<ExitToFloor2>())
+        {
+            sceneToLoad = "Floor2";
+            exitAllowed = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.GetComponent<ExitDoorBottomLeft>() || collision.GetComponent<ExitDoorTopLeft>() || collision.GetComponent<ExitDoorTopRight>()
-        || collision.GetComponent<ExitDoorBottomRight>() || collision.GetComponent<SecretEntranceUnderCarpet>() || collision.GetComponent<ExitDoorFromHiddenRoom>())
+        || collision.GetComponent<ExitDoorBottomRight>() || collision.GetComponent<SecretEntranceUnderCarpet>() || collision.GetComponent<ExitDoorFromHiddenRoom>()
+        || collision.GetComponent<ExitToFloor2>())
         {
             exitAllowed = false;
         }
