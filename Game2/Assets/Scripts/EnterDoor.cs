@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,7 +24,7 @@ public class EnterDoor : MonoBehaviour
         }
         if (collision.GetComponent<RightDoor>())
         {
-            sceneToLoad = "Floor 1 right";
+            sceneToLoad = "Key Game";
             enterAllowed = true;
         }
         else if (collision.GetComponent<LeftDoor>())

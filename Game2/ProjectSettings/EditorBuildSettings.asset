@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Ash_Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Mini Games/Key Game.unity
+    guid: 992b79c78d4aa4cc7a650d8303e6621e
+  - enabled: 1
     path: Assets/Scenes/Floor 1.unity
     guid: ead9c8a296c3cd84d917c0732ce080ed
   - enabled: 1
@@ -63,6 +66,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Floor3/Floor3 left secret.unity
     guid: 36ceabc739f9f2247bac095109b754e4
   - enabled: 1
-    path: Assets/Scenes/Investigation Room - Copy.unity
+    path: Assets/Scenes/Investigation Room.unity
     guid: c9a6aea81ac2d40bf870416a2d01bca9
   m_configObjects: {}
