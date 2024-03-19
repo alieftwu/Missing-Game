@@ -29,6 +29,7 @@ public class PalayerInvestigationRoom : MonoBehaviour
         else if (collision.GetComponent<ConstructionSuspect>())
         {
             thoughtBubblePrefab.SetActive(true);
+            childText.text = "After a series of electrical issues in the house, Daniel was hired to fix the faulty wiring.  Daniel was hired from a contracting website without any references.  Daniel completed the wiring the day prior to Mr. Stone’s disappearance.";
             PlayerPrefs.SetString("suspect", "construction");
         }
         else if (collision.GetComponent<ButlerSuspect>())
@@ -37,6 +38,7 @@ public class PalayerInvestigationRoom : MonoBehaviour
             childText.text = "Johnathan has served as the victim’s butler for over 20 years and enjoyed a pleasant relationship.  After completing his nightly duties, he was the last person to see Mr. Stone.";
             PlayerPrefs.SetString("suspect", "butler");
         }
+
     }
     private void OnTriggerExit2D(Collider2D collision)
     {

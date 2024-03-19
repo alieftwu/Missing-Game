@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class InvestigationRoomClues : MonoBehaviour
 {
     public Sprite secondSprite;
@@ -11,6 +11,9 @@ public class InvestigationRoomClues : MonoBehaviour
     public KeyCode interactKey = KeyCode.E;
     public CollectableType type;
     public Sprite icon;
+
+
+
 
     private void Start()
     {
@@ -52,6 +55,8 @@ public class InvestigationRoomClues : MonoBehaviour
                 spriteRenderer.sprite = secondSprite;
             }
         }
+
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
