@@ -10010,6 +10010,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LandScape Manual
       objectReference: {fileID: 0}
+    - target: {fileID: 6456746284046073977, guid: 5876cd1cd93bc4744b954edcef7cf3e3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6459095847743195955, guid: 5876cd1cd93bc4744b954edcef7cf3e3, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.40187657
