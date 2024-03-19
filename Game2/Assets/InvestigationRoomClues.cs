@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpdateSprite : MonoBehaviour
+public class InvestigationRoomClues : MonoBehaviour
 {
     public Sprite secondSprite;
     private SpriteRenderer spriteRenderer;
@@ -16,12 +16,10 @@ public class UpdateSprite : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalSprite = spriteRenderer.sprite;
-        
-        // Check if the clue has been collected previously and destroy it if necessary
-        if (PlayerPrefs.HasKey(gameObject.name) && PlayerPrefs.GetInt(gameObject.name) == 1)
-        {
-            Destroy(gameObject);
-        }
+
+        print(PlayerPrefs.GetInt(gameObject.name));
+        print(gameObject.name);
+
     }
 
     private void Update()
@@ -30,6 +28,18 @@ public class UpdateSprite : MonoBehaviour
         {
             InteractWithClues();
         }
+
+        if (PlayerPrefs.GetInt(gameObject.name) == 1)
+        {
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        }
+        else
+        {
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -60,29 +70,9 @@ public class UpdateSprite : MonoBehaviour
         {
             if (collider.CompareTag("Player"))
             {
-                Player player = collider.GetComponent<Player>();
-                if (player != null)
-                {
-                    // Mark the clue as collected in PlayerPrefs
-       
-                    player.inventory.Add(this);
-                    
-                }
+
             }
-            else if (collider.CompareTag("Clue"))
-            {
-                // Destroy the clue object
-                PlayerPrefs.SetInt(gameObject.name, 1);
-                print(PlayerPrefs.GetInt(gameObject.name));
-                print(gameObject.name);
-                print("item saved");
-                Destroy(collider.gameObject);
-            }
+
         }
     }
-}
-
-public enum CollectableType
-{
-    NONE, G_BOOK, WATER_CAN, SPADE, HALF_BROOM, O_HALF_BROOM, PLATE, W_GLOVE, B_HAMMER, C_GOGGLES, EMP_ID, SAW, WORKER_VEST, 
 }
