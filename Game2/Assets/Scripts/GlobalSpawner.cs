@@ -16,15 +16,15 @@ public class GlobalSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GlobalVarForClueLayouts.globalVar == 0)
+        if(PlayerPrefs.GetInt("globalState") == 0)
         {
             obj1.SetActive(true);
-        }else if(GlobalVarForClueLayouts.globalVar == 1)
+        }else if(PlayerPrefs.GetInt("globalState") == 1)
         {
             obj2.SetActive(true);
-        }else if(GlobalVarForClueLayouts.globalVar == 2)
+        }else if(PlayerPrefs.GetInt("globalState") == 2)
         {
             obj3.SetActive(true); 
         }//end else if
-}//end update
+}//end update4
 }//end update
