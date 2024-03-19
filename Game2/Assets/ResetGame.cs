@@ -10,6 +10,8 @@ public class ResetGame : MonoBehaviour
         PlayerPrefs.DeleteAll();
 
         System.Random r = new System.Random();
+        print(r.Next(0, 3));
         PlayerPrefs.SetInt("globalState", r.Next(0, 3));
+        print("Global State: " + PlayerPrefs.GetInt("globalState"));
     }
 }

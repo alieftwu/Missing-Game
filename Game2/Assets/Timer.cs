@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
 {
     public static Timer Instance { get; private set; }
     [SerializeField] TextMeshProUGUI timerText;
-    public static float remainingTime = 80f; // Static variable to hold the remaining time, initially set to 2 minutes
+    public static float remainingTime = 300f; // Static variable to hold the remaining time, initially set to 2 minutes
     public GameObject popupPanel; // Reference to the popup panel object
 
     private bool popupDisplayed = false;
