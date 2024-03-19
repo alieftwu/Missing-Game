@@ -12,6 +12,7 @@ public class MainMenu: MonoBehaviour {
         Debug.Log("ButtonPressed set to 1");
         SceneManager.LoadScene("Floor 1");
         Time.timeScale = 0;
+        Timer.Instance.ResetTimer();
     }
 
     public void QuitGame() {

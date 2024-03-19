@@ -96,8 +96,8 @@ public class Timer : MonoBehaviour
         SceneManager.LoadScene("Investigation Room");
     }
 
-    private void ResetTimer()
+    public void ResetTimer()
     {
-        remainingTime = 600f; // Reset the remaining time to 2 minutes
+        remainingTime = 300f; // Reset the remaining time to 2 minutes
     }
 }

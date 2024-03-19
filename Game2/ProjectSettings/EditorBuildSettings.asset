@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: a1ca0eebe44bd402aaf4265878812d89
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Ash_Scene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -19,7 +19,7 @@ EditorBuildSettings:
     guid: 414eeb9d349ad4a4689140a9ddd240f0
   - enabled: 1
     path: Assets/Scenes/Floor 1.unity
-    guid: ead9c8a296c3cd84d917c0732ce080ed
+    guid: 36798deab4f9e4cac91f27efe6613829
   - enabled: 1
     path: Assets/Scenes/Loose Screen.unity
     guid: 092fa78c0578a4ec1abc60ec6d48cc38
