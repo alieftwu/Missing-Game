@@ -186,7 +186,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.15572524, y: 0.26201355}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -197,7 +197,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.3114502, y: 1.8008718}
   m_EdgeRadius: 0
 --- !u!4 &92055241
 Transform:
@@ -6521,6 +6521,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1613763502581542007, guid: 24f3d79921a2e6f49a57fe3f327c0aa7, type: 3}
+      propertyPath: secondSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 50f53f2f7d4a1f3409aa226d5ac40836, type: 3}
     - target: {fileID: 4761604257899559212, guid: 24f3d79921a2e6f49a57fe3f327c0aa7, type: 3}
       propertyPath: m_Name
       value: Plate
